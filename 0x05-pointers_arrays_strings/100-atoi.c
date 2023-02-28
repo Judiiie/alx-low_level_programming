@@ -2,7 +2,7 @@
 
 
 /**
- * _atoi - Function prints the string, and new 
+ * _atoi - Function prints the string, and new
  * @s: String taken by the function as the parameter
  * Return: converted integer
  */
