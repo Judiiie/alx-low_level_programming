@@ -1,16 +1,16 @@
- #include "main.h"
+#include "main.h"
 
 /**
  * puts2 - even index character of the str
- * @str: pointer 
+ * @str: pointer
  */
 
 void puts2(char *str)
 {
 	int l = 0, i = 0, j;
-        char *str_value = str;
-
-        while (*str_value != '\0')
+	char *str_value = str;
+	
+	while (*str_value != '\0')
 	{
 		str_value++;
 		l++;
