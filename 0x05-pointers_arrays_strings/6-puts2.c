@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * puts2 - even index character of the str
  * @str: pointer
@@ -21,5 +20,5 @@ void puts2(char *str)
 		if (j % 2 == 0)
 			_putchar(str[j]);
 	}
-	_putchar('\n');
+	_putchar('\n')
 }
