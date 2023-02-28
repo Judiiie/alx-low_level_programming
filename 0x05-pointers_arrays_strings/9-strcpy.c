@@ -7,19 +7,12 @@
  * Return: Function returns a string copy
  */
 char *-strcpy(char *dest, char *src)
-{       
-        int ln = 0, i;
-
-        while (*(src + ln) != '\0')
-        {
-                ln++
-        }
-        
-        for (i = 0; i < ln; i++)
-        {
-                dest[i] = src[i];
-        }
-        dest[ln] = '\0';
-        
-        return(dest);
+{
+	int i;
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i++] = '\0';
+	return (dest);
 }
