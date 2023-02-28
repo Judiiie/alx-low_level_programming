@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * puts2 - even index character of the str
- * @str: pointer
- */
+* puts2 - even index character of the str
+* @str: pointer
+*/
 
 void puts2(char *str)
 {
