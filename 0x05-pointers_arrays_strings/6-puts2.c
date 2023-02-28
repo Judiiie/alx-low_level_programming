@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * puts2 - even index character of the str
  * @str: pointer
