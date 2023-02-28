@@ -6,7 +6,6 @@
  * Return: The length of Astr
  */
 int _strlen(char *s)
-
 {
 	int l = 0;
 	
@@ -15,6 +14,5 @@ int _strlen(char *s)
 		l = l + 1;
 		s++;
 	}
-
 	return (l);
 }
