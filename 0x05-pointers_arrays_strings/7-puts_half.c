@@ -5,7 +5,7 @@
  *  @str: pointer
  */
 
-  void puts_half(char *str)
+void puts_half(char *str)
 {
 	int ln = 0, i, n;
 
