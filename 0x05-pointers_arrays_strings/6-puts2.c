@@ -9,7 +9,7 @@ void puts2(char *str)
 {
 	int l = 0, i = 0, j;
 	char *str_value = str;
-	
+
 	while (*str_value != '\0')
 	{
 		str_value++;
