@@ -3,21 +3,20 @@ include "main.h"
 /**
  * print_rev - Function is printed in reverse
  * @s: Parameter of the function
+ * Return:void
  */
 void print_rev(char *s)
 {
-	int i, ln = 0;
+	int c = 0;
 
-	while (*s != '\0')
+	while (s[c] != '\0')
 	{
-		ln++;
-		s++;
+	c++;
 	}
-	s--;
-	for (i = ln; i > 0; i--)
+	
+	for (c -= 1; c >= 0; c--)
 	{
-		_putchar(*s);
-		s--;
+	_putchar(s[c]);
 	}
 	_putchar('\n');
 }
