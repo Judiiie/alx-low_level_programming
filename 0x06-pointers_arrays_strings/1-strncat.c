@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * _strncat - a custom strcat function to concatinate two strings
- * @dest: The first string taken into the function
- * @src: The second string taken into the function with n length
+ * _strncat - Function to concatinate two strings
+ * @dest: First string taken into the function
+ * @src: Second string taken into the function with n len
  * @n: The size of the src memory address
  * Return: dest, a concatinated string
  */
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int l, c
+	int l, c;
 
 	l = 0;
 	c = 0;
@@ -21,7 +21,7 @@ char *_strncat(char *dest, char *src, int n)
 	c = 0;
 	while (c < n && src[c])
 	{
-		dest[l] = src[c];
+		dest[l++] = src[c];
 		c++;
 	}
 	return (dest);
