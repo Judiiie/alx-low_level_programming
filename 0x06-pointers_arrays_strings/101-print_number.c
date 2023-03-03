@@ -5,17 +5,17 @@
  * @n:  for outputed int value
  */
 
-void print_number(int n)
+void print_value(int n)
 {
-	unsigned int number = n;
+	unsigned int value = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		number = -(number);
+		value = -(value);
 	}
 
-	if ((number / 10) > 0)
-		print_number(number / 10);
-	_putchar((number % 10) + '0');
+	if ((value / 10) > 0)
+		print_value(value / 10);
+	_putchar((value % 10) + '0');
 }
