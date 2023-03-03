@@ -8,11 +8,11 @@
 
 char *rot13(char *s)
 {
-	int i; l;
+	int i; ln;
 
-	l = strlen(s);
+	ln = strlen(s);
 
-	for (i = 0; i < l; i++)
+	for (i = 0; i < ln; i++)
 	{
 		if ((*(s + i) >= 'a' && *(s + i) < 'n') || 
 				(*(s + i) >= 'A' && *(s + i) < 'N'))
