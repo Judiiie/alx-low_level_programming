@@ -8,19 +8,19 @@
 
 char *cap_string(char *s)
 {
-	char sc[] = {32, 9, '\n', ',', '.', ';', '!', '?', '"', '(', ')', '{', '}'};
-	int i, ln = 13, idx = 0;
+	char c[] = {32, 9, '\n', ',', '.', ';', '!', '?', '"', '(', ')', '{', '}'};
+	int i, l = 13, ind = 0;
 
-	while (s[idx])
+	while (s[ind])
 	{
 		i = 0;
-		while (i < ln)
+		while (i < l)
 		{
-			if ((idx == 0 || s[idx - 1] == sc[i]) && (s[idx] >= 97 && s[idx] <= 122))
-				s[idx] = s[idx] - 32;
+			if ((ind == 0 || s[ind - 1] == c[i]) && (s[ind] >= 97 && s[ind] <= 122))
+				s[ind] = s[ind] - 32;
 			i++;
 		}
-		idx++;
+		ind++;
 	}
 	return (s);
 }
