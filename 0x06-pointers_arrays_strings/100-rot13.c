@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * rot13 - encodes a string using rot13
+ * rot13 - encoding a string using rot13
  * @s: string to be encoded
  * Return: the encoded string
  */
 
 char *rot13(char *s)
 {
-	int i; ln;
+	int i; l;
 
-	ln = strlen(s);
+	l = strlen(s);
 
-	for (i = 0; i < ln; i++)
+	for (i = 0; i < l; i++)
 	{
 		if ((*(s + i) >= 'a' && *(s + i) < 'n') || 
 				(*(s + i) >= 'A' && *(s + i) < 'N'))
