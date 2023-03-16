@@ -6,12 +6,36 @@
  * @grid: The 2-dimensional array of integers to be free
  * @height: The height of grid
  */
-void free_grid(int **grid, int height)
+int **alloc_grid(int width, int height)
 {
-	int index;
+	int **_2daPtr;
+	int c = 0, r = 0;
 
-	for (index = 0; index < height; index++)
-		free(grid[index]);
+	if (width <= 0 || height <= 0)
+		return (NULL);
 
-	free(grid);
+	_2daPtr = malloc(sizeof(int *) * height);
+
+	if (_2daPtr == NULL)
+		return (NULL);
+
+	for ( ; c < height; c++)
+	{
+		_2daPtr[c] = malloc(sizeof(int) * width);
+		if (_2daPtr[c] ==  NULL)
+		{
+			for ( ; c >= 0; c--)
+				free(_2daPtr[c]);
+
+			free(_2daPtr);
+			return (NULL);
+		}
+	}
+	for (c = 0; c < width; c++)
+	{
+		for ( ; r < width; r++)
+			_2daPtr[c][r] = 0;
+	}
+
+	return (_2daPtr);
 }
