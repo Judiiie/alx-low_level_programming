@@ -1,46 +1,36 @@
-#include "main.h"
 #include <stdlib.h>
+#include <stddef.h>
+#include <string.h>
+#include "main.h"
 
 /**
- * alloc_grid - Returns a pointer to a 2-dimensional array of
- *               integers with each element initalized to 0.
- * @width: The width of the 2-dimensional array.
- * @height: The height of the 2-dimensional array.
- *
- * Return: If width <= 0, height <= 0, or the function fails - NULL.
+ * str_concat - concantinates
+ * @s1: 1st string
+ * @s2: 2nd string
+ * Return: NULL of failer, Pointer
  */
-int **alloc_grid(int width, int height)
+char *str_concat(char *s1, char *s2)
 {
-	int **twoD;
-	int hgt_index, wid_index;
+	char *sPtr;
+	unsigned long int tot_strln;
+	int i, j, k = 0;
 
-	if (width <= 0 || height <= 0)
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+
+	tot_strln = strlen(s1) + strlen(s2);
+	sPtr = (char *) malloc(tot_strln * sizeof(char) + 1);
+
+	if (sPtr == NULL)
 		return (NULL);
 
-	twoD = malloc(sizeof(int *) * height);
+	for (i = 0; s1[i]; i++)
+		sPtr[k++] = s1[i];
 
-	if (twoD == NULL)
-		return (NULL);
+	for (j = 0; s2[j]; j++)
+		sPtr[k++] = s2[j];
 
-	for (hgt_index = 0; hgt_index < height; hgt_index++)
-	{
-		twoD[hgt_index] = malloc(sizeof(int) * width);
-
-		if (twoD[hgt_index] == NULL)
-		{
-			for (; hgt_index >= 0; hgt_index--)
-				free(twoD[hgt_index]);
-
-			free(twoD);
-			return (NULL);
-		}
-	}
-
-	for (hgt_index = 0; hgt_index < height; hgt_index++)
-	{
-		for (wid_index = 0; wid_index < width; wid_index++)
-			twoD[hgt_index][wid_index] = 0;
-	}
-
-	return (twoD);
+	return (sPtr);
 }
